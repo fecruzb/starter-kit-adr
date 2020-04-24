@@ -1,6 +1,7 @@
 # Pré requisitos
 
 Download and Install Node & NPM: https://nodejs.org/en/
+
 Download and install GIT: https://git-scm.com/downloads
 
 # Instalação
@@ -48,13 +49,13 @@ Referentes aos dados e apis: Store
 
 Os arquivos executam na seguinte ordem:
 
-- pages/_document.jsx
---- pages/_app.jsx (children of _document.jsx)
------ components/Store.jsx (children of _app.jsx)
------ components/Layout.jsx (children of Store.jsx)
------ components/Header.jsx & Page.jsx (childrens of Layout.jsx)
-------- index.jsx (children of page)
---------- components/BoxLeft.jsx & components/BoxRight.jsx & components/BoxInputs.jsx (childrens of index.jsx)
+.. pages/_document.jsx
+.... pages/_app.jsx (children of _document.jsx)
+...... components/Store.jsx (children of _app.jsx)
+........ components/Layout.jsx (children of Store.jsx)
+........ components/Header.jsx & Page.jsx (childrens of Layout.jsx)
+.......... index.jsx (children of page)
+............ components/BoxLeft.jsx & components/BoxRight.jsx & components/BoxInputs.jsx (childrens of index.jsx)
 
 Existe um objeto global, que é chamado de `state`. Este `state` é definido dentro do arquivo `components/Store`. A ideia é que este estado esteja acessivel em todos os components e páginas que estejam abaixo dele. Você vai perceber que as páginas e os components de layout recebem `state` e `changeState` como propriedades provientes do component `components/Store.jsx`.
 
