@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 
 export default ({ state }) => (
-  <AppBar color="secondary" position="static">
+  <AppBar color="primary" position="static">
     <Toolbar>
       <Grid container alignItems="center">
         <Grid item xs>

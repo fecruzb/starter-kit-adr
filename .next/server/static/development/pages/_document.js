@@ -1008,11 +1008,8 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
     secondary: {
       main: "#19857b"
     },
-    error: {
-      main: _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__["red"].A400
-    },
     background: {
-      default: "#fff"
+      default: "#ffffff"
     }
   }
 });

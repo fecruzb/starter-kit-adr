@@ -1,15 +1,15 @@
+import axios from "axios";
 import React from "react";
 import Layout from "./Layout";
-
 export default function Store({ Component, pageProps }) {
   const [state, setState] = React.useState(null);
 
   const changeState = (state) => {
     if (state) {
-      fetch("https://randomuser.me/api/")
-        .then((res) => res.json())
+      axios
+        .get("https://randomuser.me/api/", { params: state })
         .then((result) => {
-          setState(result);
+          setState(result.data);
         });
     } else {
       setState(null);

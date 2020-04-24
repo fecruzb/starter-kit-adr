@@ -5,7 +5,7 @@ export default ({ changeState, state }) => {
     field1: "",
   });
   return (
-    <Box marginTop={2} padding={2} bgcolor="grey.200">
+    <Box padding={2} borderTop={1} borderColor="grey.100">
       <Grid container alignItems="center" spacing={2}>
         <Grid item xs>
           <TextField
@@ -21,7 +21,7 @@ export default ({ changeState, state }) => {
         <Grid item>
           <Button
             disabled={!state}
-            color="secondary"
+            color="default"
             variant="contained"
             onClick={() => {
               setInput({

@@ -138,7 +138,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (({
   state
 }) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
-  color: "secondary",
+  color: "primary",
   position: "static",
   __self: undefined,
   __source: {
@@ -351,22 +351,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   children
 }) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Box"], {
   height: "100%",
-  paddingY: 4,
+  paddingY: 0,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 4,
     columnNumber: 3
   }
-}, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-  maxWidth: false,
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5,
-    columnNumber: 5
-  }
-}, children)));
+}, children));
 
 /***/ }),
 
@@ -380,13 +372,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Store; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./layout/Layout.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Layout */ "./layout/Layout.jsx");
 var _jsxFileName = "/Users/fecruzb/codes/andre/layout/Store.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -394,19 +389,21 @@ function Store({
   Component,
   pageProps
 }) {
-  const [state, setState] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(null);
+  const [state, setState] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(null);
 
   const changeState = state => {
     if (state) {
-      fetch("https://randomuser.me/api/").then(res => res.json()).then(result => {
-        setState(result);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://randomuser.me/api/", {
+        params: state
+      }).then(result => {
+        setState(result.data);
       });
     } else {
       setState(null);
     }
   };
 
-  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     changeState: changeState,
     state: state,
     __self: this,
@@ -2241,11 +2238,8 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
     secondary: {
       main: "#19857b"
     },
-    error: {
-      main: _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__["red"].A400
-    },
     background: {
-      default: "#fff"
+      default: "#ffffff"
     }
   }
 });
@@ -2306,6 +2300,17 @@ module.exports = require("@material-ui/core/colors");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/styles");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
