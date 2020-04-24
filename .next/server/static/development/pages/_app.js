@@ -115,10 +115,10 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 /***/ }),
 
-/***/ "./components/Header.jsx":
-/*!*******************************!*\
-  !*** ./components/Header.jsx ***!
-  \*******************************/
+/***/ "./layouts/Header.jsx":
+/*!****************************!*\
+  !*** ./layouts/Header.jsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/fecruzb/codes/andre/components/Header.jsx";
+var _jsxFileName = "/Users/fecruzb/codes/andre/layouts/Header.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -190,7 +190,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24,
+    lineNumber: 25,
     columnNumber: 9
   }
 }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Box"], {
@@ -198,7 +198,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25,
+    lineNumber: 26,
     columnNumber: 11
   }
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -206,7 +206,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26,
+    lineNumber: 27,
     columnNumber: 13
   }
 }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Button"], {
@@ -215,28 +215,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27,
+    lineNumber: 28,
     columnNumber: 15
   }
 }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
   href: "/about",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 29,
-    columnNumber: 13
-  }
-}, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Button"], {
-  variant: "text",
-  color: "inherit",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 30,
-    columnNumber: 15
-  }
-}, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/contact",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -252,14 +235,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 33,
     columnNumber: 15
   }
+}, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/contact",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 37,
+    columnNumber: 13
+  }
+}, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+  variant: "text",
+  color: "inherit",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 38,
+    columnNumber: 15
+  }
 }, "Contact"))))))));
 
 /***/ }),
 
-/***/ "./components/Layout.jsx":
-/*!*******************************!*\
-  !*** ./components/Layout.jsx ***!
-  \*******************************/
+/***/ "./layouts/Layout.jsx":
+/*!****************************!*\
+  !*** ./layouts/Layout.jsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -269,9 +269,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Page */ "./components/Page.jsx");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./components/Header.jsx");
-var _jsxFileName = "/Users/fecruzb/codes/andre/components/Layout.jsx";
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./layouts/Header.jsx");
+/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Page */ "./layouts/Page.jsx");
+var _jsxFileName = "/Users/fecruzb/codes/andre/layouts/Layout.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -279,8 +279,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   children,
-  state,
-  changeState
+  state
 }) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
   container: true,
   direction: "column",
@@ -301,7 +300,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 7,
     columnNumber: 5
   }
-}, __jsx(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}, __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
   state: state,
   __self: undefined,
   __source: {
@@ -317,24 +316,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 5
   }
-}, __jsx(_Page__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}, __jsx(_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11,
+    lineNumber: 12,
     columnNumber: 7
   }
 }, children))));
 
 /***/ }),
 
-/***/ "./components/Page.jsx":
-/*!*****************************!*\
-  !*** ./components/Page.jsx ***!
-  \*****************************/
+/***/ "./layouts/Page.jsx":
+/*!**************************!*\
+  !*** ./layouts/Page.jsx ***!
+  \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -344,7 +343,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/fecruzb/codes/andre/components/Page.jsx";
+var _jsxFileName = "/Users/fecruzb/codes/andre/layouts/Page.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -352,8 +351,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   children
 }) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Box"], {
   height: "100%",
-  bgcolor: "grey.100",
-  py: 4,
+  paddingY: 4,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -372,10 +370,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./components/Store.jsx":
-/*!******************************!*\
-  !*** ./components/Store.jsx ***!
-  \******************************/
+/***/ "./layouts/Store.jsx":
+/*!***************************!*\
+  !*** ./layouts/Store.jsx ***!
+  \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -384,8 +382,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Store; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
-var _jsxFileName = "/Users/fecruzb/codes/andre/components/Store.jsx";
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./layouts/Layout.jsx");
+var _jsxFileName = "/Users/fecruzb/codes/andre/layouts/Store.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -408,7 +406,7 @@ function Store({
     }
   };
 
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     changeState: changeState,
     state: state,
     __self: this,
@@ -2120,7 +2118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Store */ "./components/Store.jsx");
+/* harmony import */ var _layouts_Store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layouts/Store */ "./layouts/Store.jsx");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../theme */ "./theme.js");
@@ -2191,7 +2189,7 @@ function MyApp(props) {
       lineNumber: 30,
       columnNumber: 9
     }
-  }), __jsx(_components_Store__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_layouts_Store__WEBPACK_IMPORTED_MODULE_5__["default"], {
     Component: Component,
     pageProps: pageProps,
     __self: this,

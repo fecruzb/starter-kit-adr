@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
-import Store from "../components/Store";
+import Store from "../layouts/Store";
 import "../styles.css";
 import theme from "../theme";
 
