@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport { Box, Typography } from \"@material-ui/core\";\nexport default (() => __jsx(Box, null, __jsx(Typography, null, \"Contact\")));","map":null,"metadata":{},"sourceType":"module"}
