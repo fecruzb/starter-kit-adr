@@ -1,18 +1,13 @@
-import { Grid, Box } from "@material-ui/core";
-import Head from "next/head";
+import { Box, Grid } from "@material-ui/core";
+import { BoxInputs, BoxLeft, BoxRight } from './components';
 
-import { BoxLeft, BoxRight, BoxInputs } from "./components";
 
 export default ({ changeState, state }) => (
-  <Box height="100%">
-    <Head>
-      <title>Home Page</title>
-    </Head>
-
-    <Grid container style={{ height: "100%" }}>
+  <Box style={{ height: "100%" }}>
+    <Grid container style={{ width: "100%", height: "100%" }}>
       <Grid item xs={6}>
-        <Grid container direction="column" style={{ height: "100%" }}>
-          <Grid item style={{ flexGrow: 1 }}>
+        <Grid container style={{ width: "100%", height: "100%" }} direction="column">
+          <Grid item style={{ flex: 1}}>
             <BoxLeft state={state} />
           </Grid>
           <Grid item>

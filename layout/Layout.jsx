@@ -3,12 +3,12 @@ import Header from "./Header";
 import Page from "./Page";
 
 export default ({ children, state }) => (
-  <Grid container direction="column" style={{ height: "100%" }}>
+  <Grid container direction="column" wrap="nowrap" style={{ height: "100%", width: "100%" }}>
     <Grid item>
       <Header state={state} />
     </Grid>
 
-    <Grid item style={{ flexGrow: 1 }}>
+    <Grid item xs style={{ flexGrow: 1, width: "100%" }}>
       <Page>{children}</Page>
     </Grid>
   </Grid>

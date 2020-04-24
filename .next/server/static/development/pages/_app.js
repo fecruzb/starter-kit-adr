@@ -283,8 +283,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 }) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
   container: true,
   direction: "column",
+  wrap: "nowrap",
   style: {
-    height: "100%"
+    height: "100%",
+    width: "100%"
   },
   __self: undefined,
   __source: {
@@ -310,8 +312,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }
 })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
   item: true,
+  xs: true,
   style: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: "100%"
   },
   __self: undefined,
   __source: {
