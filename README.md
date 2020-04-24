@@ -48,3 +48,9 @@ Veja a documentação, principalmente do material-ui para saber como utilizar os
 - Estrutura (Servidor, React, Babel, Webpack ...): https://nextjs.org/
 - Estilo (Componentes Visuais, Botões, Inputs, Menus ...): https://material-ui.com/
 - Requisições AJAX: https://github.com/axios/axios
+
+## Tutorias
+
+- React: https://pt-br.reactjs.org/tutorial/tutorial.html
+- Node/Windows: https://docs.microsoft.com/pt-br/windows/nodejs/setup-on-windows
+- Node/NPM: https://www.digitalocean.com/community/tutorials/how-to-use-node-js-modules-with-npm-and-package-json-pt
