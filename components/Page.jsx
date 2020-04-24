@@ -1,4 +1,4 @@
-import { Box, Container } from "@material-ui/core";
+import { Box } from '@material-ui/core'
 
 export default ({ children }) => (
   <Box height="100%" paddingY={0}>

@@ -47,3 +47,4 @@ Veja a documentação, principalmente do material-ui para saber como utilizar os
 
 - Estrutura (Servidor, React, Babel, Webpack ...): https://nextjs.org/
 - Estilo (Componentes Visuais, Botões, Inputs, Menus ...): https://material-ui.com/
+- Requisições AJAX: https://github.com/axios/axios

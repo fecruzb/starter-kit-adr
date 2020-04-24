@@ -1,11 +1,13 @@
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/core/styles";
-import Head from "next/head";
-import PropTypes from "prop-types";
-import React from "react";
-import Store from "../components/Store";
-import "../styles/index.css";
-import theme from "../theme";
+import '../styles/index.css'
+
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
+import Head from 'next/head'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import Store from '../components/Store'
+import theme from '../theme'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
