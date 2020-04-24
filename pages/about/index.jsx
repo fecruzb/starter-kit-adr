@@ -1,8 +1,8 @@
-import { Box, Typography } from "@material-ui/core";
-import Head from "next/head";
+import { Box, Typography } from '@material-ui/core'
+import Head from 'next/head'
 
 export default () => (
-  <Box>
+  <Box padding={3}>
     <Head>
       <title>About Us</title>
     </Head>

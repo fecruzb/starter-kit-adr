@@ -1,6 +1,8 @@
-import axios from "axios";
-import React from "react";
-import Layout from "./Layout";
+import axios from 'axios'
+import React from 'react'
+
+import Layout from './Layout'
+
 export default function Store({ Component, pageProps }) {
   const [state, setState] = React.useState(null);
 
@@ -9,7 +11,10 @@ export default function Store({ Component, pageProps }) {
       axios
         .get("https://randomuser.me/api/", { params: state })
         .then((result) => {
-          setState(result.data);
+          setState({
+            sent: state,
+            received: result.data.results[0],
+          });
         });
     } else {
       setState(null);

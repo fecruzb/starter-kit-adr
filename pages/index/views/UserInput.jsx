@@ -1,15 +1,17 @@
-import { Box, Button, Grid, TextField } from "@material-ui/core";
+import { Box, Button, Grid, TextField } from '@material-ui/core'
 
 export default ({ changeState, state }) => {
   const [input, setInput] = React.useState({
-    field1: "",
+    field1: state && state.sent ? state.sent.field1 : "",
   });
+
   return (
     <Box padding={2} borderTop={1} borderColor="grey.100">
       <Grid container alignItems="center" spacing={2}>
         <Grid item xs>
           <TextField
             fullWidth
+            disabled={!!state}
             name="field1"
             variant="outlined"
             value={input.field1}
@@ -18,23 +20,27 @@ export default ({ changeState, state }) => {
             }
           />
         </Grid>
+
         <Grid item>
           <Button
             disabled={!state}
-            color="default"
+            color="secondary"
             variant="contained"
             onClick={() => {
               setInput({
                 field1: "",
               });
+
               changeState(null);
             }}
           >
             CLEAR
           </Button>
         </Grid>
+
         <Grid item>
           <Button
+            disabled={!input.field1 || state}
             color="primary"
             variant="contained"
             onClick={() => changeState(input)}

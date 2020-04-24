@@ -3,8 +3,8 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
-import Store from "../layout/Store";
-import "../styles.css";
+import Store from "../components/Store";
+import "../styles/index.css";
 import theme from "../theme";
 
 export default function MyApp(props) {
@@ -20,7 +20,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>My Title</title>
+        <title>Untitled</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

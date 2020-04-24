@@ -928,33 +928,74 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         columnNumber: 11
       }
     }), __jsx("link", {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: "/apple-touch-icon.png",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12,
         columnNumber: 11
       }
-    })), __jsx("body", {
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      href: "/favicon-32x32.png",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 17,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      href: "/favicon-16x16.png",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      rel: "manifest",
+      href: "/site.webmanifest",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30,
+        columnNumber: 11
+      }
+    })), __jsx("body", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35,
         columnNumber: 9
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 36,
         columnNumber: 11
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 37,
         columnNumber: 11
       }
     })));
@@ -971,7 +1012,7 @@ MyDocument.getInitialProps = async ctx => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 49,
         columnNumber: 54
       }
     })))
@@ -996,17 +1037,14 @@ MyDocument.getInitialProps = async ctx => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/colors */ "@material-ui/core/colors");
-/* harmony import */ var _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__);
-
 
 const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["createMuiTheme"])({
   palette: {
     primary: {
-      main: "#556cd6"
+      main: "#144"
     },
     secondary: {
-      main: "#19857b"
+      main: "#199"
     },
     background: {
       default: "#ffffff"
@@ -1026,17 +1064,6 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
 
 module.exports = __webpack_require__(/*! private-next-pages/_document.jsx */"./pages/_document.jsx");
 
-
-/***/ }),
-
-/***/ "@material-ui/core/colors":
-/*!*******************************************!*\
-  !*** external "@material-ui/core/colors" ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/colors");
 
 /***/ }),
 

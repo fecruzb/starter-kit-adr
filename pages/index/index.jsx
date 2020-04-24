@@ -1,22 +1,35 @@
-import { Box, Grid } from "@material-ui/core";
-import { BoxInputs, BoxLeft, BoxRight } from './components';
+import { Box, Grid } from '@material-ui/core'
+import Head from 'next/head'
 
+import { Left, Right, UserInput } from './views'
 
 export default ({ changeState, state }) => (
   <Box style={{ height: "100%" }}>
-    <Grid container style={{ width: "100%", height: "100%" }}>
+    <Head>
+      <title>Home</title>
+    </Head>
+
+    <Grid
+      container
+      style={{
+        width: "100%",
+        height: "100%",
+      }}
+    >
       <Grid item xs={6}>
-        <Grid container style={{ width: "100%", height: "100%" }} direction="column">
-          <Grid item style={{ flex: 1}}>
-            <BoxLeft state={state} />
+        <Box width="100%" height="100%" overflow="hidden">
+          <Grid container direction="column" style={{ height: "100%" }}>
+            <Grid item xs style={{ flex: 1 }}>
+              <Left state={state} />
+            </Grid>
+            <Grid item>
+              <UserInput changeState={changeState} state={state} />
+            </Grid>
           </Grid>
-          <Grid item>
-            <BoxInputs changeState={changeState} state={state} />
-          </Grid>
-        </Grid>
+        </Box>
       </Grid>
       <Grid item xs={6}>
-        <BoxRight state={state} />
+        <Right state={state} />
       </Grid>
     </Grid>
   </Box>
