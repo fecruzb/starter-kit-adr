@@ -1,8 +1,10 @@
 import { Box, Button, Grid, TextField } from '@material-ui/core'
 
-export default ({ changeState, state }) => {
+export default ({ actions, state }) => {
+  // Parecido com a store, mas restrito apenas a este componente
+  // E aos componentes filhos também
   const [input, setInput] = React.useState({
-    field1: state && state.sent ? state.sent.field1 : "",
+    field1: state.search ? state.search.request.field1 : "",
   });
 
   return (
@@ -11,7 +13,7 @@ export default ({ changeState, state }) => {
         <Grid item xs>
           <TextField
             fullWidth
-            disabled={!!state}
+            disabled={!!state.search}
             name="field1"
             variant="outlined"
             value={input.field1}
@@ -23,7 +25,7 @@ export default ({ changeState, state }) => {
 
         <Grid item>
           <Button
-            disabled={!state}
+            disabled={!state.search}
             color="secondary"
             variant="contained"
             onClick={() => {
@@ -31,7 +33,7 @@ export default ({ changeState, state }) => {
                 field1: "",
               });
 
-              changeState(null);
+              actions.search_clear();
             }}
           >
             CLEAR
@@ -40,12 +42,12 @@ export default ({ changeState, state }) => {
 
         <Grid item>
           <Button
-            disabled={!input.field1 || state}
+            disabled={!input.field1 || !!state.search}
             color="primary"
             variant="contained"
-            onClick={() => changeState(input)}
+            onClick={() => actions.search_select(input)}
           >
-            Submit
+            Search
           </Button>
         </Grid>
       </Grid>

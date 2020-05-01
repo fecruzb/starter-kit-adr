@@ -1,29 +1,15 @@
-import axios from 'axios'
 import React from 'react'
 
+import actions from '../utils/actions'
+import mutations from '../utils/mutations'
 import Layout from './Layout'
 
-export default function Store({ Component, pageProps }) {
-  const [state, setState] = React.useState(null);
-
-  const changeState = (state) => {
-    if (state) {
-      axios
-        .get("https://randomuser.me/api/", { params: state })
-        .then((result) => {
-          setState({
-            sent: state,
-            received: result.data.results[0],
-          });
-        });
-    } else {
-      setState(null);
-    }
-  };
-
+export default ({ Component, pageProps }) => {
+  const [state, setState] = React.useState({});
+  const mutatedActions = mutations(actions, state, setState);
   return (
-    <Layout changeState={changeState} state={state}>
-      <Component {...pageProps} changeState={changeState} state={state} />
+    <Layout state={state}>
+      <Component {...pageProps} actions={mutatedActions} state={state} />
     </Layout>
   );
-}
+};

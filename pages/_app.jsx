@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import Store from '../components/Store'
-import theme from '../theme'
+import theme from '../utils/theme'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;

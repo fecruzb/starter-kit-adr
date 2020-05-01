@@ -1,42 +1,61 @@
 import { AppBar, Box, Button, Grid, Toolbar, Typography } from '@material-ui/core'
 import Link from 'next/link'
+import { withRouter } from 'next/router'
 
-export default ({ state }) => (
-  <AppBar color="primary" position="static">
-    <Toolbar>
-      <Grid container alignItems="center">
-        {/* dynamic part - based on the state */}
-        <Grid item xs>
-          {state ? (
-            <Typography>
-              {state.received.name.first} {state.received.name.last}
-            </Typography>
-          ) : (
-            <Typography>NAME</Typography>
-          )}
-        </Grid>
+export default withRouter(({ state, router }) => {
+  const getHeaderContent = () => {
+    switch (router.pathname) {
+      case "/search":
+        return (
+          <Grid item xs>
+            {state.search ? (
+              <Typography>
+                {state.search.response.name.first}{" "}
+                {state.search.response.name.last}
+              </Typography>
+            ) : (
+              <Typography>SEARCH: NONE SELECTED</Typography>
+            )}
+          </Grid>
+        );
+      default:
+        return (
+          <Grid item xs>
+            <Typography>NORMAL HEADER</Typography>
+          </Grid>
+        );
+    }
+  };
 
-        {/* static links */}
-        <Grid item>
-          <Box color="white">
-            <Link href="/">
-              <Button variant="text" color="inherit">
-                Home
-              </Button>
-            </Link>
-            <Link href="/about">
-              <Button variant="text" color="inherit">
-                About
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button variant="text" color="inherit">
-                Contact
-              </Button>
-            </Link>
-          </Box>
+  return (
+    <AppBar color="primary" position="static">
+      <Toolbar>
+        <Grid container alignItems="center">
+          {/* dynamic part of the fixed header - based on page route*/}
+          {getHeaderContent()}
+
+          {/* static links */}
+          <Grid item>
+            <Box color="white">
+              <Link href="/">
+                <Button variant="text" color="inherit">
+                  Home
+                </Button>
+              </Link>
+              <Link href="/select">
+                <Button variant="text" color="inherit">
+                  Select
+                </Button>
+              </Link>
+              <Link href="/location">
+                <Button variant="text" color="inherit" disabled={!state.search}>
+                  Location
+                </Button>
+              </Link>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
-    </Toolbar>
-  </AppBar>
-);
+      </Toolbar>
+    </AppBar>
+  );
+});
