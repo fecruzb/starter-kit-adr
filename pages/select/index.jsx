@@ -1,7 +1,9 @@
 import { Box, Grid } from '@material-ui/core'
 import Head from 'next/head'
 
-import { Left, Right, UserInput } from './views'
+import Left from './views/Left'
+import Right from './views/Right'
+import UserInput from './views/UserInput'
 
 export default ({ actions, state }) => (
   <Box style={{ height: "100%" }}>

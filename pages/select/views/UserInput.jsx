@@ -1,8 +1,6 @@
 import { Box, Button, Grid, TextField } from '@material-ui/core'
 
 export default ({ actions, state }) => {
-  // Parecido com a store, mas restrito apenas a este componente
-  // E aos componentes filhos também
   const [input, setInput] = React.useState({
     field1: state.search ? state.search.request.field1 : "",
   });

@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Grid, Toolbar, Typography } from '@material-ui/cor
 import Link from 'next/link'
 import { withRouter } from 'next/router'
 
-export default withRouter(({ state, router }) => {
+export default withRouter(({ state, router, actions }) => {
   const getHeaderContent = () => {
     switch (router.pathname) {
       case "/search":
@@ -42,11 +42,13 @@ export default withRouter(({ state, router }) => {
                   Home
                 </Button>
               </Link>
+
               <Link href="/select">
                 <Button variant="text" color="inherit">
                   Select
                 </Button>
               </Link>
+
               <Link href="/location">
                 <Button variant="text" color="inherit" disabled={!state.search}>
                   Location
